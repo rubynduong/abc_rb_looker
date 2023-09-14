@@ -8,6 +8,7 @@ view: inventory_items {
     sql: ${TABLE}.id ;;
   }
   dimension: cost {
+    required_access_grants: [inventory]
     type: number
     sql: ${TABLE}.cost ;;
   }

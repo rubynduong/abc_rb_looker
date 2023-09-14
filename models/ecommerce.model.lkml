@@ -12,14 +12,19 @@ datagroup: ecommerce_etl {
 persist_with: ecommerce_etl
 ############ Base Explores #############
 
+access_grant: marketing {
+  user_attribute: abc_rb_demo_department
+  allowed_values: ["marketing","admin"]
+}
+
+access_grant: inventory {
+  user_attribute: abc_rb_demo_department
+  allowed_values: ["inventory","admin"]
+}
+
 explore: order_items {
   label: "Orders, Items and Users"
-  access_filter: {
-    field: products.brand
-    user_attribute: abc_rb_demo_brand
-  }
   view_name: order_items
-
   join: inventory_items {
     view_label: "Inventory Items"
     #Left Join only brings in items that have been sold as order_item
