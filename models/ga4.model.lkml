@@ -1,5 +1,5 @@
 connection: "bq_rduong"
-
+label: "Google Analytics 4"
 include: "/views/**/*.view" # include all the views
 # include: "/**/*.view.lkml"                 # include all views in this project
 # include: "my_dashboard.dashboard.lookml"   # include a LookML dashboard called my_dashboard
@@ -18,10 +18,6 @@ include: "/views/**/*.view" # include all the views
 #     sql_on: ${users.id} = ${orders.user_id} ;;
 #   }
 # }
-connection: "looker-private-demo"
-label: " eCommerce"
-include: "/views/**/*.view" # include all the views
-
 
 explore: ga_events_data {
   label: "Events"
