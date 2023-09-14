@@ -1,5 +1,5 @@
 
-view: events_data {
+view: ga_events_data {
   sql_table_name: `looker-core-sandbox.ga4_data.events_data` ;;
 
   dimension: app_info__firebase_app_id {
